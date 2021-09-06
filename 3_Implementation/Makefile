@@ -15,6 +15,7 @@ src/displaybill.cxx\
 
 INC_H = inc
 
+TEST = integrated_test.cxx
 # for makefile to run in both windows and linux build
 ifdef OS
    RM = del /q
@@ -51,6 +52,11 @@ Cppcheck:
 # for valgrind testing
 valgrind:
 	valgrind --leak-check=full ./$(TEST_PROJECT_NAME).$(EXEC)
+	
+coverage:
+	g++ -fprofile-arcs -ftest-coverage $(TEST) -I $(INC_H) $(SRC) -lgtest -lgtest_main -lpthread -lm -o $(call FixPath, $(TEST_PROJECT_NAME).$(EXEC))
+	$(call FixPath, ./$(TEST_PROJECT_NAME).$(EXEC))
+	gcov -a $(TEST)
 	
 clean:
 	$(RM) $(call FixPath,$(BUILD_DIR)/*)
