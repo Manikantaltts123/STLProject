@@ -3,16 +3,7 @@ TEST_PROJECT_NAME = MallManagement_Test
 
 BUILD_DIR = Build
 
-SRC = src/read_from_csv.cc\
-src/add_items_to_cart.cc\
-src/display_shop_details.cc\
-src/print_all_csv_details.cc\
-src/generate_new_bill.cc\
-src/generate_extras.cc\
-src/class_function_declaration.cc\
-src/remove_items_cart.cc\
-src/ShoppiBuddyMain.cc\
-src/check_user_option.cxx\
+SRC =src/check_user_option.cxx\
 src/display_menu.cxx\
 src/generate_file_map.cxx\
 src/generate_price_map.cxx\
@@ -21,14 +12,6 @@ src/calculate_final_price.cxx\
 src/read_log_file.cxx\
 src/check_membership.cxx\
 src/displaybill.cxx\
-src/cubeeaterymain.cxx\
-src/game_main.cpp\
-src/game_zone.cpp\
-src/shop_adder.cc\
-src/functionality.cc\
-src/mall_navi_menu.cc\
-src/theatre_functions.cc\
-src/theatre_main.cc\
 
 INC_H = inc
 
